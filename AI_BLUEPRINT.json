@@ -1,0 +1,145 @@
+{
+  "mode": "ai",
+  "project_title": "Incident Response Workflow",
+  "short_description": "A comprehensive workflow for managing and responding to incidents in a timely and effective manner.",
+  "domain_summary": "Incident Response is a critical process for organizations to respond to and manage incidents, minimizing their impact and ensuring business continuity.",
+  "user_persona": "Incident Response Team Lead: Responsible for overseeing the incident response process, coordinating with stakeholders, and ensuring timely and effective resolution.",
+  "architecture_notes": [
+    "Use a message broker (e.g., RabbitMQ) for communication between services.",
+    "Implement a database (e.g., PostgreSQL) for storing incident data.",
+    "Use a caching layer (e.g., Redis) for improving performance."
+  ],
+  "backend_modules": [
+    "incident_management: Handles incident creation, assignment, and tracking.",
+    "communication: Manages communication with stakeholders, including email and SMS notifications.",
+    "reporting: Generates reports on incident status, impact, and resolution."
+  ],
+  "frontend_features": [
+    "incident_dashboard: Displays incident status, assignment, and tracking information.",
+    "communication_panel: Allows team members to communicate with stakeholders.",
+    "reporting_tool: Provides reports on incident status, impact, and resolution."
+  ],
+  "data_sources": [
+    "incident_database: Stores incident data, including status, assignment, and tracking information.",
+    "stakeholder_contacts: Stores contact information for stakeholders, including email and phone numbers."
+  ],
+  "testing_strategy": [
+    "Use a combination of unit testing, integration testing, and end-to-end testing to ensure the workflow is functioning correctly."
+  ],
+  "starter_questions": [
+    "What is the current status of the incident?",
+    "Who is assigned to the incident?",
+    "What is the estimated time to resolve the incident?"
+  ],
+  "workflow_steps": [
+    "incident_creation: Create a new incident and assign it to a team member.",
+    "incident_assignment: Assign the incident to a team member and notify stakeholders.",
+    "incident_tracking: Track the status of the incident and update stakeholders accordingly."
+  ],
+  "business_rules": [
+    "Incidents must be assigned to a team member within 30 minutes of creation.",
+    "Team members must update the incident status every 2 hours.",
+    "Stakeholders must be notified of incident updates within 1 hour."
+  ],
+  "sample_documents": [
+    {
+      "filename": "incident_report.docx",
+      "content": "Incident Report Template"
+    },
+    {
+      "filename": "stakeholder_contact_list.xlsx",
+      "content": "Stakeholder Contact List Template"
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "incident_management_tool",
+      "description": "A tool for managing and tracking incidents."
+    },
+    {
+      "name": "communication_tool",
+      "description": "A tool for communicating with stakeholders."
+    },
+    {
+      "name": "reporting_tool",
+      "description": "A tool for generating reports on incident status, impact, and resolution."
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "Use a message broker (e.g., RabbitMQ) for communication between services.",
+        "Implement a database (e.g., PostgreSQL) for storing incident data.",
+        "Use a caching layer (e.g., Redis) for improving performance."
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "incident_management: Handles incident creation, assignment, and tracking.",
+        "communication: Manages communication with stakeholders, including email and SMS notifications.",
+        "reporting: Generates reports on incident status, impact, and resolution."
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "incident_dashboard: Displays incident status, assignment, and tracking information.",
+        "communication_panel: Allows team members to communicate with stakeholders.",
+        "reporting_tool: Provides reports on incident status, impact, and resolution."
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Use a combination of unit testing, integration testing, and end-to-end testing to ensure the workflow is functioning correctly."
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "incident_creation: Create a new incident and assign it to a team member.",
+        "incident_assignment: Assign the incident to a team member and notify stakeholders.",
+        "incident_tracking: Track the status of the incident and update stakeholders accordingly."
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "Incident Response Workflow",
+  "architecture_template_id": 30,
+  "architecture_template_path": "templates/langgraph-workflow/incident-response-workflow",
+  "architecture_description": "Incident Response Workflow for incident triage and response.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
