@@ -1,0 +1,6 @@
+DOMAIN_SUMMARY = 'Incident Response is a critical process for organizations to respond to and manage incidents, minimizing their impact and ensuring business continuity.'
+USER_PERSONA = 'Incident Response Team Lead: Responsible for overseeing the incident response process, coordinating with stakeholders, and ensuring timely and effective resolution.'
+STARTER_QUESTIONS = ['What is the current status of the incident?', 'Who is assigned to the incident?', 'What is the estimated time to resolve the incident?']
+WORKFLOW_STEPS = ['incident_creation: Create a new incident and assign it to a team member.', 'incident_assignment: Assign the incident to a team member and notify stakeholders.', 'incident_tracking: Track the status of the incident and update stakeholders accordingly.']
+BUSINESS_RULES = ['Incidents must be assigned to a team member within 30 minutes of creation.', 'Team members must update the incident status every 2 hours.', 'Stakeholders must be notified of incident updates within 1 hour.']
+TOOL_CATALOG = [{'name': 'incident_management_tool', 'description': 'A tool for managing and tracking incidents.'}, {'name': 'communication_tool', 'description': 'A tool for communicating with stakeholders.'}, {'name': 'reporting_tool', 'description': 'A tool for generating reports on incident status, impact, and resolution.'}]
